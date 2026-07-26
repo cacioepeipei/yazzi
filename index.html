@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdultingOS — Graduate Checklist</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Navigation tool • Fresh graduate support</p>
+          <h1>AdultingOS</h1>
+          <p class="hero-copy">
+            Describe your situation in plain language and get a personalized checklist with official sources,
+            confidence markers, and a visible reasoning trace.
+          </p>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="panel input-panel">
+          <h2>Tell the assistant about your life stage</h2>
+          <form id="chat-form">
+            <label for="user-input">Your situation</label>
+            <textarea id="user-input" rows="5">I just graduated, just started my first job, and I may move out soon.</textarea>
+            <div class="quick-pills">
+              <button type="button" class="pill" data-example="I just graduated and I am starting work this month.">Graduation + work</button>
+              <button type="button" class="pill" data-example="I am NS-eligible and planning to move out after university.">NS + housing</button>
+              <button type="button" class="pill" data-example="I have a student loan and I am getting married soon.">Loan + marriage</button>
+            </div>
+            <button class="primary-btn" type="submit">Generate plan</button>
+          </form>
+        </section>
+
+        <section class="panel results-panel">
+          <div id="chat-thread" class="chat-thread"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
