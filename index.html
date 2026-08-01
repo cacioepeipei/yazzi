@@ -3,43 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdultingOS — Graduate Checklist</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>PathWise — Life-stage guidance</title>
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <div class="app-shell">
+      <div id="scroll-hint" class="scroll-hint" role="status" aria-live="polite">
+        Scroll down to view your plan.
+      </div>
       <header class="hero">
         <div>
-          <p class="eyebrow">Navigation tool • Fresh graduate support</p>
-          <h1>AdultingOS</h1>
+          <h1>PathWise</h1>
           <p class="hero-copy">
-            Describe your situation in plain language and get a personalized checklist with official sources,
-            confidence markers, and a visible reasoning trace.
+            Welcome to PathWise!<br />
+            We're here to create checklists for you as you bravely take your next step in life.
           </p>
         </div>
       </header>
 
       <main class="grid">
-        <section class="panel input-panel">
-          <h2>Tell the assistant about your life stage</h2>
-          <form id="chat-form">
-            <label for="user-input">Your situation</label>
-            <textarea id="user-input" rows="5">I just graduated, just started my first job, and I may move out soon.</textarea>
-            <div class="quick-pills">
-              <button type="button" class="pill" data-example="I just graduated and I am starting work this month.">Graduation + work</button>
-              <button type="button" class="pill" data-example="I am NS-eligible and planning to move out after university.">NS + housing</button>
-              <button type="button" class="pill" data-example="I have a student loan and I am getting married soon.">Loan + marriage</button>
-            </div>
-            <button class="primary-btn" type="submit">Generate plan</button>
-          </form>
-        </section>
+        <div class="left-column">
+          <section class="panel input-panel">
+            <h2>Describe your life stage here:</h2>
+            <form id="chat-form">
+              <label for="user-input">Your situation:</label>
+              <textarea id="user-input" rows="5" placeholder="Describe your next step in your own words..."></textarea>
+              <div class="suggestion-block">
+                <button class="primary-btn" type="submit">Generate plan</button>
+                <p class="suggestion-label">Not sure what to say? Try these suggestions:</p>
+                <div class="quick-pills">
+                  <button type="button" class="pill" data-example="I’m in secondary school and choosing between polytechnic and junior college.">Secondary school choices</button>
+                  <button type="button" class="pill" data-example="I’m heading to university and I want to understand scholarships and student loans.">University + finances</button>
+                  <button type="button" class="pill" data-example="I just started work and I need help with CPF, tax, and MediShield.">First job basics</button>
+                  <button type="button" class="pill" data-example="I’m getting married next year and thinking about housing grants and family support.">Marriage + housing</button>
+                  <button type="button" class="pill" data-example="I’m expecting a baby and want to understand Baby Bonus and childcare support.">Parenting support</button>
+                  <button type="button" class="pill" data-example="I’m planning for retirement and want to review CPF LIFE and healthcare.">Retirement planning</button>
+                </div>
+              </div>
+            </form>
+          </section>
+
+        </div>
 
         <section class="panel results-panel">
+          <div class="top-bar">
+            <h2 style="margin: 0;">Your plan</h2>
+          </div>
           <div id="chat-thread" class="chat-thread"></div>
         </section>
       </main>
+
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
   </body>
 </html>
